@@ -5,10 +5,10 @@ body {
     margin: 0;
 }
 
-.container {
+/* .container {
     background-color: aliceblue;
     width: 870px;
-}
+} */
 
 .container1 {
     display: flex;
@@ -51,9 +51,14 @@ Banner Section
 .bg a {
     margin-left: 50px;
     border: 2px solid rgba(247, 211, 11, 0.877);
+    border-radius: 10px;
     background-color: rgba(247, 211, 11, 0.877);
     text-decoration: none;
     padding: 10px;
+}
+
+.bg a:hover {
+    border: 3px solid rgb(236, 147, 31);
 }
 
 
@@ -74,6 +79,10 @@ Upcoming watch and grid section
     height: 240px;
 }
 
+#links a:hover {
+    border: 3px solid sandybrown;
+}
+
 .link1-2 {
     display: grid;
     border: 1px solid;
@@ -83,7 +92,7 @@ Upcoming watch and grid section
     padding: 10px 5px 10px 5px;
     text-align: center;
     cursor: pointer;
-    text-decoration:none;
+    text-decoration: none;
     color: black;
 }
 
@@ -105,15 +114,25 @@ Upcoming watch and grid section
 Blog part
 ---------------- */
 .blogs {
-    margin-top: 55%;
-    margin-left: 5px;
+    margin-top: -19%;
+    margin-left: 260px;
+    width: 10px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
 }
 
 .blog {
+    border: 1px solid none;
+    border-radius: 10px;
+    box-shadow: rgba(3, 3, 3, 0.24) 0px 3px 8px;
+}
+
+.blog-upcoming {
     padding: 0 9px;
     width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 10px;
 }
 
 .blogs .blog a {
@@ -128,9 +147,28 @@ Blog part
 .time-duration {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 20px;
+    padding: 5px 0 20px 0;
     color: gray;
+}
+
+.span {
+    margin: 0 9px 0 9px;
+}
+
+.time-duration-upcoming {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0 20px 0;
+    color: gray;
+}
+
+
+/* -----------
+    extra line 
+    ------------ */
+#sub {
+    display: none;
 }
 
 
@@ -143,29 +181,161 @@ Blog part
     margin-top: 2%;
     padding: 16px 16px 30px 10px;
 }
-#footer h2{
+
+#footer h2 {
     text-align: center;
     color: white;
     margin-left: 10px;
     margin-top: 34px;
     font-size: 40px;
 }
-#footer hr{
+
+#footer hr {
     margin-left: 100px;
     margin-right: 100px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
-#footer div ul{
+
+#footer div ul {
     color: white;
     list-style: none;
     cursor: pointer;
-    text-align:center;
+    text-align: center;
 }
-#footer div ul li{
+
+#footer div ul li {
     display: inline-block;
     padding: 20px;
-    
+
 }
-#footer div ul li a{
+
+#footer div ul li a {
     color: white;
+}
+
+
+/* ---------------
+   For Mobile View 
+   ----------------*/
+
+@media only screen and (max-width:688px) {
+    .sec-1 {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0 0 0;
+        width: 100%;
+    }
+
+    .bg p {
+        text-align: center;
+
+    }
+
+    .bg h1 {
+        margin-left: 3em;
+    }
+
+    .bg a {
+        margin: 0 0 0 210px;
+    }
+
+    .bg img {
+        margin: 50px 0 0 100px;
+    }
+
+    .sec-2 {
+        flex-direction: column;
+        margin-top: 90%;
+        margin-left: 15%;
+        height: 10px;
+        border: none;
+    }
+
+    #links {
+        border: 0;
+        background-color: white;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 25%;
+        margin-top: 45%;
+    }
+
+    #footer {
+        margin-top: 10%;
+        width: 100%;
+        height: 100vw;
+    }
+
+    #footer div ul li {
+        display: grid;
+        padding: 20px 20px 20px 0;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+
+/* ---------------
+    Tab View
+    ------------- */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .sec-1 {
+        width: 100%;
+    }
+
+    .sec-2 {
+        margin-top: 55%;
+        height: 5px;
+    }
+
+    #links {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 100px;
+        margin-left: 25%;
+        border: 0;
+        background-color: white;
+        column-gap: 50px;
+        ;
+
+    }
+
+    #links a {
+        margin: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .blogs {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px;
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    .for-tab-view {
+        width: 100%;
+    }
+
+    .last-article {
+        display: none;
+    }
+
+    #sub{
+        display: block;
+        margin-left: 50%;
+        border: 2px solid;
+        border-radius: 8px;
+        padding: 10px;
+        background-color: red;
+        color: white;
+    }
 }
