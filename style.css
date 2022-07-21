@@ -219,6 +219,10 @@ Blog part
    ----------------*/
 
 @media only screen and (max-width:688px) {
+    body,html{
+        overflow-x:hidden;
+        width: 100%;
+    }
     .sec-1 {
         display: flex;
         flex-direction: column;
@@ -258,14 +262,15 @@ Blog part
 
     .blogs {
         grid-template-columns: repeat(1, 1fr);
-        margin-left: 25%;
-        margin-top: 45%;
+        margin-left: 5%;
+        margin-top: 55%;
+        width: 100%;
     }
 
     #footer {
         margin-top: 10%;
         width: 100%;
-        height: 110vw;
+        height: 130vw;
     }
 
     #footer div ul li {
@@ -284,6 +289,10 @@ Blog part
     Tab View
     ------------- */
 @media only screen and (min-width:689px) and (max-width:992px) {
+    body,html{
+        overflow-x:hidden;
+        width: 100%;
+    }
     .sec-1 {
         width: 100%;
     }
